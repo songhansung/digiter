@@ -1,44 +1,44 @@
 package day1;
 
-public class º¯¼ö {
+public class ë³€ìˆ˜ {
 
 	public static void main(String[] args) {
-		// ÁÖ¼® : ÄÚµåÀÇ ¿µÇâÀ» ¹ÌÄ¡Áö ¾ÊÀº ¹®±¸·Î,
-		// ¼³¸íÀ» À§ÇØ»ç¿ë
-		// //´Â ÇÑÁÙ ÁÖ¼®
-		/* ÁÖ¼®ÀÌ´Ù
-		 * ´ÜÃ¼ÁÖ¼®ÀÓ
-		 * È£È£È£È£È£È£È£È£È£È£È£*/
-		//º¯¼ö ¼±¾ð ¹æ¹ý
-		//º¯¼öÅ¸ÀÔ :º¯¼ö¸í;
-		char ch;//¹®ÀÚÇü º¯¼ö ch¸¦ ¼±¾ð
+		// ì£¼ì„ : ì½”ë“œì˜ ì˜í–¥ì„ ë¯¸ì¹˜ì§€ ì•Šì€ ë¬¸êµ¬ë¡œ,
+		// ì„¤ëª…ì„ ìœ„í•´ì‚¬ìš©
+		// //ëŠ” í•œì¤„ ì£¼ì„
+		/* ì£¼ì„ì´ë‹¤
+		 * ë‹¨ì²´ì£¼ì„ìž„
+		 * í˜¸í˜¸í˜¸í˜¸í˜¸í˜¸í˜¸í˜¸í˜¸í˜¸í˜¸*/
+		//ë³€ìˆ˜ ì„ ì–¸ ë°©ë²•
+		//ë³€ìˆ˜íƒ€ìž… :ë³€ìˆ˜ëª…;
+		char ch;//ë¬¸ìží˜• ë³€ìˆ˜ chë¥¼ ì„ ì–¸
 		int num1;
 		long num2;
 		float num3;
 		double num4;
 		boolean bool;
-		int appleCount;//º¯¼öÀÇ ÀÌ¸§Àº ÀÇ¹ÌÀÖ°Ô ´ë¼Ò¹®ÀÚ±¸ºÐ
-	    //int ch;//Áßº¹ ¼±¾ð ºÒ°¡
-		//º¯¼ö ¼±¾ð ¹× ÃÊ±âÈ­ ¹æ¹ý
-		//º¯¼öÅ¸ÀÔ º¯¼ö¸í = °ª;
-		//¹®ÀÚ´Â ÇÑ±ÛÀÚ¸¦ÀÇ¹Ì, ¹®ÀÚ´Â ¾ÕµÚ·Î ''¸¦ ºÙÀÓ
+		int appleCount;//ë³€ìˆ˜ì˜ ì´ë¦„ì€ ì˜ë¯¸ìžˆê²Œ ëŒ€ì†Œë¬¸ìžêµ¬ë¶„
+	    //int ch;//ì¤‘ë³µ ì„ ì–¸ ë¶ˆê°€
+		//ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™” ë°©ë²•
+		//ë³€ìˆ˜íƒ€ìž… ë³€ìˆ˜ëª… = ê°’;
+		//ë¬¸ìžëŠ” í•œê¸€ìžë¥¼ì˜ë¯¸, ë¬¸ìžëŠ” ì•žë’¤ë¡œ ''ë¥¼ ë¶™ìž„
 		char cha1 = 'A';
 		char cha2 = '1';
-		char cha3 = 'ÇÑ';
+		char cha3 = 'í•œ';
 		char cha4 = '\'';
 		char cha5 = '_';
 		
-		int numb1 = 10; // ½ÊÁø¼ö 10À» ÀúÀå
-		int numb2 = 010; //8Áø¼ö 10À» ÀúÀå =>10Áø¼ö 8
-		int numb3 = 0x10;//16Áø¼ö 10À» ÀúÀå=>10Áø¼ö 16
+		int numb1 = 10; // ì‹­ì§„ìˆ˜ 10ì„ ì €ìž¥
+		int numb2 = 010; //8ì§„ìˆ˜ 10ì„ ì €ìž¥ =>10ì§„ìˆ˜ 8
+		int numb3 = 0x10;//16ì§„ìˆ˜ 10ì„ ì €ìž¥=>10ì§„ìˆ˜ 16
 		// int numb4 = 123456789012;
-		// Å«¼öÀÇ °æ¿ì intÇüÀ¸·Î Ç¥ÇöÇÒ¼ö ¾ø´Ù
-		//long Àº Á¢¹Ì»ç LÀ» ¾µ¼öÀÖ´Ù
-		long numb5 = 123456789012L; //Å«¼ö´Â ¸¶Áö¸·¿¡LºÙ¿©¾ÆµÊ
+		// í°ìˆ˜ì˜ ê²½ìš° intí˜•ìœ¼ë¡œ í‘œí˜„í• ìˆ˜ ì—†ë‹¤
+		//long ì€ ì ‘ë¯¸ì‚¬ Lì„ ì“¸ìˆ˜ìžˆë‹¤
+		long numb5 = 123456789012L; //í°ìˆ˜ëŠ” ë§ˆì§€ë§‰ì—Lë¶™ì—¬ì•„ë¨
 		
-		//½Ç¼ö
-		//±âº» ½Ç¼ö°ªÀº doubleÇüÀ¸·Î ÀÎ½ÄÀÌµÈ´Ù.
-		//floatÇüÀÇ ½Ç¼ö°ªÀº Á¢¹Ì»ç F¸¦ ²À ºÙÀÎ´Ù.
+		//ì‹¤ìˆ˜
+		//ê¸°ë³¸ ì‹¤ìˆ˜ê°’ì€ doubleí˜•ìœ¼ë¡œ ì¸ì‹ì´ëœë‹¤.
+		//floatí˜•ì˜ ì‹¤ìˆ˜ê°’ì€ ì ‘ë¯¸ì‚¬ Fë¥¼ ê¼­ ë¶™ì¸ë‹¤.
 		float numb6 = 1.234F;
 		
 		double numb7 = 1.236;
@@ -46,19 +46,16 @@ public class º¯¼ö {
 		boolean bool1 = true;
 		boolean bool2 = false;
 		
-		//º¯¼ö ¼±¾ðÈÄ ÃÊ±âÈ­2
-		// º¯¼öÅ¸ÀÔ º¯¼ö¸í = º¯¼ö¸í;
+		//ë³€ìˆ˜ ì„ ì–¸í›„ ì´ˆê¸°í™”2
+		// ë³€ìˆ˜íƒ€ìž… ë³€ìˆ˜ëª… = ë³€ìˆ˜ëª…;
 		int kor1 = 100;
 		int kor2 = kor1;
 		
-		
-		
-		
-		
-		
-		
-	
-		
+		//ì—¬ëŸ¬ ë³€ìˆ˜ë¥¼ í•œë²ˆì— ì„ ì–¸í•˜ëŠ” ë°©ë²•
+		//ë‹¨, ê°™ì€ ë³€ìˆ˜ íƒ€ìž…ë§Œ ê°€ëŠ¥
+		// ì •ìˆ˜í˜• ë³€ìˆ˜ aëŠ” 10%, bëŠ” 20% cëŠ”30 %ë¥¼ ì§€ì •í•˜ë„ë¡ ì„ ì–¸
+		int a=10, b=20, c=30;
+		int e,d=20;
 		
 
 	}
