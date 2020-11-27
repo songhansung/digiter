@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스예제</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box1{
+            min-width: 1190px;
+            height: 161px;
+            
+        }
+        .box2{
+            min-width: 1190px;
+            height: 50px;
+            border-top: 1px solid rgb(224,227,230);
+            border-bottom: 1px solid rgb(224,227,230);
+        }
+        .box3{
+            min-width: 1190px;
+            height: 500px;
+        }
+        .box{
+            height: 100%;
+            width: 1190px;
+            margin: 0 auto;
+        }
+        .conbox1{
+            height: 0 auto;
+            width: 750px;
+            float: left;
+        }
+        .conbox2{
+            height: 0 auto;
+            width: 350px;
+            float:right;
+            
+        }
+        .box3>.box{
+            padding: 20px 30px;
+            box-sizing: border-box;
+        }
+        .goshow{
+            height: 135px;
+            width: 750px;
+            box-sizing: border-box;
+            background: url(https://ssl.pstatic.net/tveta/libs/1295/1295259/33cec00b47822ec5a5c1_20201123104355350.jpg);
+            background-size: 750px 135px;
+            display: block;
+        }
+        .gongback{
+            margin-bottom: 12px;
+        }
+        .login-box{
+            height: 135px;
+            width: 100%;
+            border: 1px solid rgb(218,225,230);
+            background-color: rgb(247,249,250);
+            padding: 16px 16px 12px 17px;
+            box-sizing: border-box;
+        }
+        .login-box>.in-box{
+            width: 100%;
+            height: 100%;
+        }
+        .login_msg{
+            font-size: 12px;
+            color: gray;
+            line-height: 16px;
+        }
+        .login_go{
+            width: 315px;
+            height: 48px;
+            background-color: rgb(24, 206, 95);
+            border: 1px solid #15c654;
+            text-align: center;
+            font-weight: 700;
+            color: white;
+            line-height: 44px;
+            border-radius: 2px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .login-box .sub_left{
+            float: left;
+        }
+        .login-box .sub_right{
+            float: right;
+        }
+        .login-box .sub_box::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .find_id,.find_pw,.signup,.fa-lock,.fa-user{
+            color: black;
+            line-height: 16px;
+            font-size: 12px;
+            display: inline-block;
+        }
+        .login-box .sub_box{
+            margin: 10px 8px 0 4px;
+        }
+        .login-box .point{
+            display: inline-block;
+            height: 3px;
+            width: 3px;
+            background-color: #d7dce0;
+            border-radius: 2px;
+            line-height: 2px;
+            margin-bottom: 2px;
+        }
+        .fa-lock,.fa-user{
+            color: gray;
+            opacity: 0.5;
+        }
+        .sub_left .find_id:hover{
+            text-decoration: underline;
+        }
+        .sub_left .find_pw:hover{
+            text-decoration: underline;
+        }
+        .sub_right .signup:hover{
+            text-decoration: underline;
+        }
+        .newsstand{
+            height: 49px;
+            width: 750px;
+            position: relative;
+            padding: 12px 15px 11px 15px;
+            background-color: #f7f9fa;
+            border: 1px solid #dae1e6;
+            line-height: 20px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+        .issue_area{
+            float: left;
+            height: 24px;
+            width: 380px;
+        }
+        .rolling_news{
+            height: 100%;
+            width: 82%;
+            box-sizing: border-box;
+            background-color: yellow;
+            float: right;
+            overflow: hidden;
+        }
+        .link_media{
+            height: 100%;
+            width: 18%;
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        .direct_area{
+            float: right;
+            height: 24px;
+            width: 197px;
+        }
+        .link_news{
+            color: #3565c9;
+            font-size: 12px;
+            font-weight: bold;
+            float: left;
+        }
+        .direct_area .point{
+            display: inline-block;
+            height: 3px;
+            width: 3px;
+            background-color: #d7dce0;
+            border-radius: 2px;
+            line-height: 2px;
+            margin-left: 10px;
+            margin-bottom: 3px;
+        }
+        .link_direct{
+            margin: 0 7px 0 5px;
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            float: right;
+        }
+        .sc_timesquare{
+            height: 47px;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .left_timesquare{
+            height: 100%;
+            width: 80%;
+            float: left;
+            border: 1px solid black;
+            box-sizing: border-box;  
+        }
+        .right_timesquare{
+            height: 100%;
+            width: 20%;
+            float: right;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 10px 5px 5px 12px;
+        }
+        .news_button{
+            background-color: white;
+            border: 1px solid #e4e8eb;
+            float: left;
+        }
+        .right_timesquare .btn_nav{
+            font-size: 14px;
+            margin: 3px 7px 3px 7px;
+            display: block;
+        }
+        .box .sc_newscast{
+            height: 56px;
+            width: 100%;
+            position: relative;
+            padding: 16px 0px 11px 0px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .sc_newscast .link_newstand{
+            color: black;
+            font-weight: bolder;
+            font-size: 14px;
+            display: block;
+            float: left;
+            
+        }
+        .sc_newscast .link_newstand::before{
+            content: '';
+            width: 27px;
+            height: 24px;
+            display: inline-block;
+            background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
+            background-position: -228px -296px;
+            background-size: 440px 410px;
+            line-height: 22px;
+            vertical-align: -5px;
+        }
+        .sc_newscast .group_title{
+            width: 25%;
+            height: 100%;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 10px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+        .group_title .btn_left{
+            color: black;
+        }
+        .group_title .btn_right{
+            color: black;
+            font-weight: bolder;
+        }
+        .group_title .gum{
+            display: inline-block;
+            height: 3px;
+            width: 3px;
+            background-color: #d7dce0;
+            border-radius: 2px;
+            line-height: 2px;
+            margin-bottom: 2px;
+            vertical-align: 2px;
+            
+        }
+        .sc_newscast .set_area{
+            height: 100%;
+            width: 15%;
+            float: right;
+        }
+        .set_area .btn_list,.btn_list2,.btn_go{
+            margin-left: 8px;
+            margin-right: 8px;
+            line-height: 28px;
+            font-size: 14px;
+            color: gray;
+            float: right;
+        }
+        .set_area .btn_list:hover,.btn_list2:hover,.btn_go:hover{
+            color: black
+        }
+        .conbox1 .mt_page_viwe{
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+        .mt_page_viwe .page_viwe{
+            height: 260px;
+            float: left;
+        }
+        .thumb>img{
+            vertical-align: top;
+            height: 20px;
+        }
+        .page_viwe .thumb_box1,.thumb_box2,.thumb_box3,.thumb_box4,.thumb_box5,.thumb_box6{
+            float: left;
+            position: relative;
+            line-height: 30px;
+            width: 16.66%;
+            height: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 23px 0 22px;
+            border: 1px solid #dae1e6;
+            border-right: 0px;
+            border-bottom: 0px;
+            
+        }
+        .page_viwe .two_box1,.two_box2,.two_box3,.two_box4,.two_box5,.two_box6{
+            float: left;
+            position: relative;
+            line-height: 30px;
+            width: 16.66%;
+            height: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 23px 0 22px;
+            border: 1px solid #dae1e6;
+            border-right: 0px;
+            border-bottom: 0px;
+        }
+        .page_viwe .three_box1,.three_box2,.three_box3,.three_box4,.three_box5,.three_box6{
+            float: left;
+            position: relative;
+            line-height: 30px;
+            width: 16.66%;
+            height: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 23px 0 22px;
+            border: 1px solid #dae1e6;
+            border-right: 0px;
+            border-bottom: 0px;
+        }
+        .page_viwe .for_box1,.for_box2,.for_box3,.for_box4,.for_box5,.for_box6{
+            float: left;
+            position: relative;
+            line-height: 30px;
+            width: 16.66%;
+            height: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 23px 0 22px;
+            border: 1px solid #dae1e6;
+            border-right: 0px;
+        }
+        .page_viwe .thumb_box6,.two_box6,.three_box6,.for_box6{
+            border-right: 1px solid #dae1e6;
+        }   
+    </style>
+    <script src="https://kit.fontawesome.com/3a4fdcd1c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box1">
+        <div class="box"></div>
+    </div>
+    <div class="box2">
+        <div class="box"></div>
+    </div>
+    <div class="box3">
+        <div class="box">
+            <div class="conbox1">
+                <div class="add gongback">
+                    <a href="https://lineagem.plaync.com/update/2020/201111_update?LM=11020101" target="_blank"><div class="goshow"></div></a>
+                </div>
+                <div class="newsstand">
+                    <div class="issue_area">
+                        <a href="#" class="link_media">연합뉴스 <i class="fas fa-angle-right"></i></a>
+                        <div class="rolling_news"></div>
+                    </div>
+                    <div class="direct_area">
+                        <a href="#" class="link_news">네이버뉴스<span class="point"></span></a>
+                        <a href="#" class="link_direct">경제</a>
+                        <a href="#" class="link_direct">스포츠</a>
+                        <a href="#" class="link_direct">연예</a>
+                    </div>
+                </div>
+                <div class="sc_newscast">
+                    <a href="#" class="link_newstand">뉴스스탠드 <i class="fas fa-angle-right"></i></a>
+                    <div class="group_title">
+                        <a href="#" class="btn_left">구독한 언론사</a>
+                        <span class="gum"></span>
+                        <a href="" class="btn_right">전체 언론사</a>
+                    </div>
+                    <div class="set_area">
+                        <a href="#" class="btn_go"><i class="fas fa-cog"></i></a>
+                        <a href="#" class="btn_list2"><i class="fas fa-th-large"></i></a>
+                        <a href="#" class="btn_list"><i class="fas fa-list"></i></a>
+                    </div>
+                </div>
+                <div class="mt_page_viwe">
+                    <div class="page_viwe">
+                        <div class="thumb_box1">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/055.png" alt="">
+                            </a>
+                        </div>
+                        <div class="thumb_box2">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/330.png" alt="">
+                            </a>
+                        </div>
+                        <div class="thumb_box3">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/368.png" alt="">
+                            </a>
+                        </div>
+                        <div class="thumb_box4">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/006.png" alt="">
+                            </a>
+                        </div>
+                        <div class="thumb_box5">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/314.png" alt="">
+                            </a>
+                        </div>
+                        <div class="thumb_box6">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/011.png" alt="">
+                            </a>
+                        </div>
+                        <div class="two_box1">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/002.png" alt="">
+                            </a>
+                        </div>
+                        <div class="two_box2">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/016.png" alt="">
+                            </a>
+                        </div>
+                        <div class="two_box3">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/117.png" alt="">
+                            </a>
+                        </div>
+                        <div class="two_box4">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/214.png" alt="">
+                            </a>
+                        </div>
+                        <div class="two_box5">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/020.png" alt="">
+                            </a>
+                        </div>
+                        <div class="two_box6">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/008.png" alt="">
+                            </a>
+                        </div>
+                        <div class="three_box1">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/277.png" alt="">
+                            </a>
+                        </div>
+                        <div class="three_box2">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/up/2020/0610/nsd151458769.png" alt="">
+                            </a>
+                        </div>
+                        <div class="three_box3">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/up/2020/0708/nsd94830278.png" alt="">
+                            </a>
+                        </div>
+                        <div class="three_box4">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/957.png" alt="">
+                            </a>
+                        </div>
+                        <div class="three_box5">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/135.png" alt="">
+                            </a>
+                        </div>
+                        <div class="three_box6">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/052.png" alt="">
+                            </a>
+                        </div>
+                        <div class="for_box1">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/914.png" alt="">
+                            </a>
+                        </div>
+                        <div class="for_box2">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/140.png" alt="">
+                            </a>
+                        </div>
+                        <div class="for_box3">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/011.png" alt="">
+                            </a>
+                        </div>
+                        <div class="for_box4">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/970.png" alt="">
+                            </a>
+                        </div>
+                        <div class="for_box5">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/921.png" alt="">
+                            </a>
+                        </div>
+                        <div class="for_box6">
+                            <a href="#" class="thumb">
+                                <img src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/143.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conbox2">
+                <div class="login-box gongback">
+                    <div class="in-box">
+                        <p class="login_msg">네이버를 더 안전하고 편리하게 이용하세요</p>
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com" class="login_in">
+                            <div class="login_go">
+                                <span>NAVER</span>
+                                로그인
+                            </div>
+                        </a>
+                        <div class="sub_box">
+                            <div class="sub_left">
+                                <i class="fas fa-lock"></i>
+                                <a href="https://nid.naver.com/user2/help/idInquiry.nhn?menu=idinquiry" class="find_id">아이디</a>
+                                <span class="point"></span>
+                                <a href="https://nid.naver.com/user2/help/pwInquiry.nhn?menu=pwinquiry" class="find_pw">비밀번호찾기</a>
+                            </div>
+                            <div class="sub_right">
+                                <a href="https://nid.naver.com/user2/V2Join.nhn?m=agree&lang=ko_KR&cpno=" class="signup"><i class="fas fa-user"></i>  회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc_timesquare">
+                    <a href="#" class="left_timesquare"></a>
+                    <div class="right_timesquare">
+                        <button class="news_button"><a href="#" class="btn_nav btn_prev"><i class="fas fa-angle-left"></i></a></button>
+                        <button class="news_button"><a href="#" class="btn_nav btn_next"><i class="fas fa-angle-right"></i></a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
