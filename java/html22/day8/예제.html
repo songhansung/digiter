@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+    <style>
+        .box{
+            width: 500px;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: yellow;
+            box-sizing: border-box;
+        }
+        .box::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box .l_box{
+            float: left;
+            width: 50%;
+            height: 480px;
+            background-color: red;
+        }
+        .box .r_box{
+            float: left;
+            width: 50%;
+            height: 480px;
+            background-color: blue;
+        }
+        .box2{
+            width: 500px;
+            background-color: green;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="l_box">
+        </div>
+        <div class="r_box">
+        </div>
+    </div>
+    <div class="box2"></div>
+</body>
+</html>
