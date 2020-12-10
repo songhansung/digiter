@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반은형예제2</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .box2{
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            position: absolute;
+        }
+        .box3{
+            width: 33.33%;
+            height: 100%;
+            box-sizing: border-box;
+            position: absolute;
+        }
+        @media (max-width:640px){
+            .box{
+                border: 1px solid red;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 1200px){
+            .box .left{
+                border: 1px solid blue;
+                float: left;
+            }
+            .box .right{
+                border: 1px solid green;
+                float: right;
+            }
+        }
+        @media (min-width: 1201px) {
+            .box .left1{
+                border: 1px solid blue;
+                float: left;
+                
+            }
+            .box .center{
+                border: 1px solid red;
+                float: left;
+                
+            }
+            .box .right1{
+                border: 1px solid green;
+                float: left;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2 left"></div>
+        <div class="box2 right"></div>
+        <div class="box3 left1"></div>
+        <div class="box3 center"></div>
+        <div class="box3 right1 "></div>
+    </div>
+</body>
+</html>

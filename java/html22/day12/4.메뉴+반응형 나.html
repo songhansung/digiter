@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형메뉴예제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            line-height: 46px
+        }
+        .box1{
+            width: calc(100% / 3);
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+        }
+        .box1+.box1{
+            border-left: 1px solid black;
+        }
+        .box_mini{
+            width: 50px;
+            border: 1px solid red;
+            height: 100%;
+            box-sizing: border-box;
+            float: right;
+            text-align: center;
+            color: red;
+        }
+        .box_mini>i{
+            font-size: 45px;
+        }
+        @media (max-width: 600px) {
+            .box1{
+                display: none;
+            }
+        }
+        @media (min-width: 601px) {
+            .box_mini{
+                display: none;
+            }
+        }
+    </style>
+     <script src="https://kit.fontawesome.com/3a4fdcd1c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="box1 left">메뉴1</div>
+        <div class="box1 center">메뉴2</div>
+        <div class="box1 right">메뉴3</div>
+        <div class="box_mini"><i class="fas fa-align-justify"></i></div>
+    </div>
+</body>
+</html>
