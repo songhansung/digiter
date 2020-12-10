@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴예제</title>
+    <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+    <style>    
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ol,ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        nav{
+            height: 500px;
+            width: 100%;
+            float: left;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .main{
+            height: 50px;
+            width: 100%;
+            border: 1px solid red;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .main .main_li{
+            float: right;
+            height: 100%;
+            width: 50px;
+            text-align: center;
+        }
+        .main .main_li .main_lnk{
+            display: inline-block;
+        }
+        .main .main_li .main_lnk>i{
+            font-size: 50px;
+            line-height: 48px;
+        }
+        .main_li .sub_box{
+            display: block;
+            position: absolute;
+            right: -83px;
+            float: left;
+            border: 1px solid black;
+            height: 200px;
+            width: 80px;
+        }
+        .main_li .sub_box .sub_li>a{
+            display: block;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/3a4fdcd1c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul class="main">
+            <li class="main_li">
+                <a href="#" class="main_lnk">
+                    <i class="fas fa-align-justify"></i>
+                </a>
+                <ul class="sub_box">
+                    <li class="sub_li">
+                        <a href="#">메뉴1</a>
+                        <a href="#">메뉴2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        $(function(){
+            $('.main_li').click(function(){
+                $('.sub_box').animate({'right':'-1px'})
+            })
+        })
+    </script>
+</body>
+</html>
