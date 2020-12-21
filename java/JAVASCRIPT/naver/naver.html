@@ -6,6 +6,7 @@
     <title>박스예제</title>
     <link rel="stylesheet" href="css/naver.css">
     <script src="../js/jquery.js"></script>
+    <script src="/js/rolling.js"></script>
     <script src="https://kit.fontawesome.com/3a4fdcd1c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -29,11 +30,20 @@
                     <button class="button_serch">
                         <span class="ico_serch"></span>
                     </button>
+                    <div class="window_foot">
+                        <div class="foot_left">
+                            <a href="#" class="foot_help">도움말</a>
+                            <a href="#" class="foot_pols">신고</a>
+                        </div>
+                        <div class="foot_right">
+                        <a href="#" class="foot_macro">자동완성끄기</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="box2">
+    <div class="box2 after">
         <div class="box2_in">
             <div class="group_nav after">
                 <div class="group_nav_left">
@@ -45,7 +55,7 @@
                     <a href="" class="item_menu">Pay</a>
                     <a href="" class="item_menu TV">TV</a>
                 </div>
-                <div class="group_nav_right">
+                <div class="group_nav_right noun">
                     <a href="" class="item_menu">사전</a>
                     <a href="" class="item_menu">뉴스</a>
                     <a href="" class="item_menu">증권</a>
@@ -56,23 +66,200 @@
                     <a href="" class="item_menu">책</a>
                     <a href="" class="item_menu">웹툰</a>
                 </div>
+                <div class="group_nav_right type_point">
+                    <div class="item_menu focus"></div>
+                    <div class="item_menu"></div>
+                    <div class="item_menu"></div>
+                    <div class="item_menu"></div>
+                    <div class="item_menu"></div>
+                </div>
                 <a href="#" class="group_nav_menu">더보기</a>
+                <div class="ly_btn_area none">
+                    <a href="#" class="btn all">서비스 전체보기</a>
+                    <a href="#" class="btn menu_set">메뉴설정</a>
+                </div>
+                <div class="ly_btn_area saves">
+                    <a href="#" class="btn reset">초기화</a>
+                    <a href="#" class="btn save">저장</a>
+                </div>
             </div>
             <div class="group_keyword">
-                dd
+                <a href="#" class="filt_btn">
+                    <i class="error_ico"></i>
+                    <span>검색어 필터 설정이 필요합니다.</span>
+                </a>
+            </div>
+            <div class="ly_realtime">
+                <div class="title_area">
+                    <span style="font-size:14px">급상승검색어</span>
+                    <p class="desc">관심사/연령대별 나만의 차트를 설정할 수 있어요.</p>
+                    <a href="#" class="btn_close"></a>
+                </div>
+            </div>
+        </div>
+        <div class="ly_service ly_menu_gibon">
+            <div class="ly_service_groud after">
+                <div class="service_list">
+                    <span class="menu_name">ㄱ-ㅁ</span>
+                    <a href="#" class="menu_list">날씨</a>
+                    <a href="#" class="menu_list">네이버 MY CAR</a>
+                    <a href="#" class="menu_list">네이버 게임</a>
+                    <a href="#" class="menu_list">네이버 예약</a>
+                    <a href="#" class="menu_list">네이버플러스 멤버십</a>
+                    <a href="#" class="menu_list">뉴스</a>
+                    <a href="#" class="menu_list">데이터랩</a>
+                    <a href="#" class="menu_list">메모</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅂ-ㅅ</span>
+                    <a href="#" class="menu_list">밴드</a>
+                    <a href="#" class="menu_list">부동산</a>
+                    <a href="#" class="menu_list">북마크</a>
+                    <a href="#" class="menu_list">소프트웨어</a>
+                    <a href="#" class="menu_list">스포츠</a>
+                    <a href="#" class="menu_list">시리즈</a>
+                    <a href="#" class="menu_list">시리즈온</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅇ</span>
+                    <a href="#" class="menu_list">영화</a>
+                    <a href="#" class="menu_list">오디오클립</a>
+                    <a href="#" class="menu_list">오피스</a>
+                    <a href="#" class="menu_list">웨일</a>
+                    <a href="#" class="menu_list">웹소설</a>
+                    <a href="#" class="menu_list">웹툰</a>
+                    <a href="#" class="menu_list">인플루언서 검색</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅈ-ㅊ</span>
+                    <a href="#" class="menu_list">자동차</a>
+                    <a href="#" class="menu_list">주소록</a>
+                    <a href="#" class="menu_list">증권</a>
+                    <a href="#" class="menu_list">지도</a>
+                    <a href="#" class="menu_list">지식백과</a>
+                    <a href="#" class="menu_list">책</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅋ-ㅎ</span>
+                    <a href="#" class="menu_list">캘린더</a>
+                    <a href="#" class="menu_list">클로바더빙</a>
+                    <a href="#" class="menu_list">파파고</a>
+                    <a href="#" class="menu_list">포스트</a>
+                    <a href="#" class="menu_list">학술정보</a>
+                    <a href="#" class="menu_list">항공권</a>
+                    <a href="#" class="menu_list">호텔</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">A-Z</span>
+                    <a href="#" class="menu_list">Keep</a>
+                    <a href="#" class="menu_list">modoo!</a>
+                    <a href="#" class="menu_list">MYBOX</a>
+                    <a href="#" class="menu_list">MY구독</a>
+                    <a href="#" class="menu_list">날씨</a>
+                    <a href="#" class="menu_list">날씨</a>
+                    <a href="#" class="menu_list">날씨</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">사전</span>
+                    <a href="#" class="menu_list">사전</a>
+                    <a href="#" class="menu_list">국어사전</a>
+                    <a href="#" class="menu_list">영어/영영사전</a>
+                    <a href="#" class="menu_list">일본어사전</a>
+                    <a href="#" class="menu_list">중국어사전</a>
+                    <a href="#" class="menu_list">한자사전</a>
+                    <a href="#" class="menu_list menu_plus">사전 더보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="ly_service ly_menu_set">
+            <div class="ly_service_groud after">
+                <div class="service_list">
+                    <span class="menu_name">ㄱ-ㅁ</span>
+                    <a href="#" class="menu_list"><label for="day"><input type="checkbox" name="day" value="day" id="day" class="menu_check" style="width:15px;height:15px;">날씨</label></a>
+                    <a href="#" class="menu_list"><label for="mycar"><input type="checkbox" name="day" value="mycar" id="mycar" class="menu_check">네이버 MY CAR</label></a>
+                    <a href="#" class="menu_list"><label for="navergame"><input type="checkbox" name="day" value="navergame" id="" class="menu_check">네이버 게임</label></a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">네이버 예약</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">네이버플러스</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">뉴스</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">데이터랩</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">메모</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅂ-ㅅ</span>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">밴드</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">부동산</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">북마크</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">소프트웨어</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">스포츠</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">시리즈</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">시리즈온</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅇ</span>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">영화</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">오디오클립</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">오피스</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">웨일</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">웹소설</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">웹툰</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">인플루언서 검색</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅈ-ㅊ</span>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">자동차</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">주소록</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">증권</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">지도</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">지식백과</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">책</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">ㅋ-ㅎ</span>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">캘린더</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">클로바더빙</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">파파고</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">포스트</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">학술정보</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">항공권</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">호텔</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">A-Z</span>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">Keep</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">modoo!</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">MYBOX</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">MY구독</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">TV연예</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">VIBE</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">V LIVE</a>
+                </div>
+                <div class="service_list">
+                    <span class="menu_name">사전</span>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">사전</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">국어사전</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">영어/영영사전</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">일본어사전</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">중국어사전</a>
+                    <a href="#" class="menu_list"><input type="checkbox" name="day" value="day">한자사전</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="box3 after">
         <div class="box after">
             <div class="conbox1 after">
-                <div class="add gongback">
+                <div class="add">
                     <a href="https://lineagem.plaync.com/update/2020/201111_update?LM=11020101" target="_blank"><div class="goshow"></div></a>
                 </div>
                 <div class="newsstand after">
                     <div class="issue_area">
                         <a href="#" class="link_media">연합뉴스 <i class="fas fa-angle-right"></i></a>
                         <div class="rolling_news">
+                            <a href="#" class="rolling_text">안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</a>
+                            <a href="#" class="rolling_text">오늘은롤링롤링롤링롤리롤리롤리롤리롤리롤리롤리롤리</a>
+                            <a href="#" class="rolling_text">예제를합니다.</a>
+                            <a href="#" class="rolling_text">내일만나오면</a>
+                            <a href="#" class="rolling_text">공휴일입니다.</a>
                         </div>
                     </div>
                     <div class="direct_area">
@@ -234,24 +421,63 @@
                             </div>
                         </div>
                         <div class="theme_fix_wrap">
-                            <div class="group_category after">
-                                <a href="#" role="button" class="button_left"></a>
-                                <a href="#" role="button" class="button_right"></a>
-                                <ul class="list_category after">
-                                    <li class="category_item"><a href="#" class="cag_itme_link">비즈니스</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">법률</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">패션뷰티</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">동물공감</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">디자인</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">중국</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">공연전시</a></li>
-                                    <li class="category_item"><a href="#" class="cag_itme_link">FARM</a></li>
-                                </ul>
+                            <a href="#" role="button" class="button_left"></a>
+                            <a href="#" role="button" class="button_right"></a>
+                            <div class="group_category after">    
+                                <div class="list_box list_box1">
+                                    <ul class="list_category after">
+                                        <li class="category_item"><a href="#" class="enter" data-target="#enter">엔터</a></li>
+                                        <li class="category_item"><a href="#" class="sport" data-target="#sports">스포츠</a></li>
+                                        <li class="category_item"><a href="#" class="car"  data-target="#car">자동차</a></li>
+                                        <li class="category_item"><a href="#" class="wepton" data-target="#wepton">웹툰</a></li>
+                                        <li class="category_item"><a href="#" class="money" data-target="#money">경제M</a></li>
+                                        <li class="category_item"><a href="#" class="food" data-target="#food">푸드</a></li>
+                                        <li class="category_item"><a href="#" class="game" data-target="#game">게임</a></li>
+                                        <li class="category_item"><a href="#" class="movie" data-target="#movie">영화</a></li>
+                                    </ul>
+                                </div>
+                                <div class="list_box list_box2">
+                                    <ul class="list_category">
+                                        <li class="category_item"><a href="#" class="job">JOB$</a></li>
+                                        <li class="category_item"><a href="#" class="tech">테크</a></li>
+                                        <li class="category_item"><a href="#" class="traval">여행</a></li>
+                                        <li class="category_item"><a href="#" class="sci">과학</a></li>
+                                        <li class="category_item"><a href="#" class="living">리방</a></li>
+                                        <li class="category_item"><a href="#" class="health">건강</a></li>
+                                        <li class="category_item"><a href="#" class="business">비지니스</a></li>
+                                        <li class="category_item"><a href="#" class="marry">연애</a></li>
+                                    </ul>
+                                </div>
+                                <div class="list_box list_box3">
+                                    <ul class="list_category">
+                                        <li class="category_item"><a href="#" class="cag_itme_link">123123</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">45555</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">패션뷰티</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">동물공감</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">디자인</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">중국</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">공연전시</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">FARM</a></li>
+                                    </ul>
+                                </div>
+                                <div class="list_box list_box4">
+                                    <ul class="list_category">
+                                        <li class="category_item"><a href="#" class="cag_itme_link">비즈니스</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">법률</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">패션뷰티</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">동물공감</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">디자인</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">중국</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">공연전시</a></li>
+                                        <li class="category_item"><a href="#" class="cag_itme_link">FARM</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="cont_sports after">
+                <div class="cont_box after">
+                    <div class="cont sports" id='sports'>
                     <div class="group_topstory after">
                         <div class="topstory_inner">
                             <a href="#" class="topstory_thumb">
@@ -534,10 +760,18 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <div class="cont enter" id="enter">엔터</div>
+                    <div class="cont car" id="car">카</div>
+                    <div class="cont wepton" id="wepton">웹툰</div>
+                    <div class="cont food" id="food">푸드</div>
+                    <div class="cont game" id="game">게임</div>
+                    <div class="cont movie" id="movie">무비</div>
+                    <div class="cont money" id="money">머니</div>
                 </div>
             </div>
             <div class="conbox2 after">
-                <div class="login-box gongback">
+                <div class="login-box">
                     <div class="in-box">
                         <p class="login_msg">네이버를 더 안전하고 편리하게 이용하세요</p>
                         <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com" class="login_in">
@@ -560,10 +794,20 @@
                     </div>
                 </div>
                 <div class="sc_timesquare">
-                    <a href="#" class="left_timesquare"></a>
+                    <div class="left_timesquare">
+                        <div class="timesquare_wrap">
+                            <div class="timesquare_rolling">
+                                <a href="#" class="card">1번째</a>
+                                <a href="#" class="card">2번째</a>
+                                <a href="#" class="card">3번쨰</a>
+                                <a href="#" class="card">4번째</a>
+                                <a href="#" class="card">5번째</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="right_timesquare">
-                        <button class="news_button"><a href="#" class="btn_nav btn_prev"><i class="fas fa-angle-left"></i></a></button>
-                        <button class="news_button"><a href="#" class="btn_nav btn_next"><i class="fas fa-angle-right"></i></a></button>
+                        <button class="news_button left"><a href="#" class="btn_nav btn_prev"><i class="fas fa-angle-left"></i></a></button>
+                        <button class="news_button right"><a href="#" class="btn_nav btn_next"><i class="fas fa-angle-right"></i></a></button>
                     </div>
                 </div>
                 <div class="rollingboard_player_inner">
@@ -975,6 +1219,11 @@
                 e.preventDefault();
                 $(this).find('.ico_arr').toggleClass('ico_arr2');
             })
+            // 검색창 화살표눌렀을때 밑에박스뜨게하기
+            $('.box1 .group_flex .service_area .green_window .button_arw').click(function(e){
+                e.preventDefault();
+                $('.window_foot').toggle()    
+            })
         })
         $(function(){
             //트랜드쇼핑 페이지 넘기기
@@ -1049,7 +1298,212 @@
             }
             return page;
         }
-        });  
+        });
+        $(function(){
+            //리스트 메뉴판 접기 더보기 기능
+            $('.group_nav_menu').click(function(e){
+                e.preventDefault();
+                $('.ly_menu_gibon').toggle();
+                // 더보기버튼클릭
+                if(!$(this).hasClass('fold')){
+                    $('.ly_btn_area.none').show();
+                    $(this).text('접기');
+                    tmpMenuArr = selectedMenuArr.slice(0);
+                    setEmptyMenu(selectedMenuArr);
+                    setMenuCheckbox(selectedMenuArr);
+                //접기버튼클릭
+                }else{
+                    $(this).text('더보기');
+                    foldBtn();
+                }
+                $(this).toggleClass('fold');
+            })
+            $('.menu_set').click(function(e){
+                e.preventDefault();
+                $('.ly_service.ly_menu_set').show();
+                $('.ly_service.ly_menu_gibon').hide();
+                $('.group_nav_right.noun').hide();
+                $('.group_nav_right.type_point').show();
+                $('.ly_btn_area.saves').show();
+                $('.ly_btn_area.none').hide();
+                $('.group_keyword').hide();
+            })
+            function foldBtn(){
+            $('.ly_service.ly_menu_gibon').hide();
+            $('.ly_service.ly_menu_set').hide();
+            $('.group_nav_right.type_point').hide();
+            $('.group_nav_right.noun').show();
+            $('.ly_btn_area.none').hide();
+            $('.ly_btn_area.saves').hide();
+            $('.group_keyword').show();
+            }
+            // 메뉴설정에서 메뉴를선택해서 메뉴넣기
+            $('.menu_list input').click(function(){
+                var text = $(this).parent().text().trim();
+                /* 선택된 메뉴가 배열에 있으면 배열에서 제거,없으면 추가*/
+                var index = tmpMenuArr.indexOf(text);
+                if(index == -1){
+                    if(tmpMenuArr.length != 5){
+                        tmpMenuArr.push(text);    
+                        // console.log(text);
+                        $('.group_nav_right.type_point .item_menu.focus').text(text);
+                        $('.group_nav_right.type_point .item_menu.focus').addClass('selected');
+                        $('.group_nav_right.type_point .item_menu.focus').removeClass('focus');
+                        $('.group_nav_right.type_point .item_menu.selected').last().next().addClass('focus');
+                    }else{
+                        alert('최대 5개까지 설정할수있습니다.')
+                        $(this).prop('checked',false);
+                    }
+                }else{
+                    tmpMenuArr.splice(index,1);
+                    setEmptyMenu(tmpMenuArr);
+                }
+            })
+            // 저장버튼클릭
+            $('.ly_btn_area .btn.save').click(function(e){
+                e.preventDefault();
+                //tmpMenuArr=>selectedMenuArr에저장
+                selectedMenuArr = tmpMenuArr.slice(0);
+                if(selectedMenuArr.length == 0){
+                    alert("선택된 메뉴가 없습니다. 초기설정으로 돌아갑니다.");
+                }
+                //selectedMenuArr에 있는 내용을 토대로 group_nav_right 를수정
+                $('.group_nav_menu').click();
+                setGroupnav(selectedMenuArr, baseMenuArr);
+            })
+            //초기화 버튼 클릭
+            $('.ly_btn_area .btn.reset').click(function(e){
+                e.preventDefault();
+                alert('초기설정으로 돌아갑니다.')
+                selectedMenuArr = [];
+                $('.group_nav_menu').click();
+                setGroupnav(selectedMenuArr,baseMenuArr);
+            })
+            // 키워드버튼 클릭시 창 오픈
+            $('.group_keyword').click(function(e){
+                e.preventDefault();
+                $('.ly_realtime').show()
+            })
+            // 오픈창 닫기
+            $('.title_area .btn_close').click(function(e){
+                e.preventDefault();
+                $('.ly_realtime').hide()
+            })
+            // 오늘 읽은만한 글 메뉴를 선택하세요
+            $('.category_item a').click(function(e){
+                e.preventDefault();
+                $('.category_item a').removeClass('select');
+                $(this).addClass('select');
+                viewGroupMenuBtn();
+                var target = $(this).attr('data-target');
+                if(target != 'undefined'){
+                    $('.cont').hide();
+                    $(target).show();
+                }
+            })
+            $('.theme_fix_wrap .button_right').click(function(e){
+                e.preventDefault();
+                //현재 선택된 메뉴가 메뉴리스트 마지막 메뉴면
+                if($('.theme_fix_wrap .select').parents('ul').find('li').last().children().hasClass('select')){
+                    menuNum++;
+                    var ml = -751 * menuNum
+                    $('.list_box.list_box1').animate({'left':'-750px'},200);
+                    $('.list_box.list_box2').animate({'left':'0'},200);
+                }else{
+                    $('.theme_fix_wrap .select').parent().next().find('a').addClass('select');
+                    $('.theme_fix_wrap .select').first().removeClass('select');
+                }
+                $('.theme_fix_wrap .select').click();
+            })
+            $('.theme_fix_wrap .button_left').click(function(e){
+                e.preventDefault();
+                if($('.theme_fix_wrap .select').parents('ul').find('li').first().children().hasClass('select')){
+                    $('.list_box.list_box2').animate({'left':'750px'},200)
+                    $('.list_box.list_box1').animate({'left':'0px'},200)
+                }else{
+                    $('.theme_fix_wrap .select').parent().prev().find('a').addClass('select');
+                    $('.theme_fix_wrap .select').last().removeClass('select');
+                }
+                $('.theme_fix_wrap .select').click();
+            })
+         
+        })
+        var selectedMenuArr = []; //메뉴설정에서 메뉴들을 선택하고 저장했을때 최종 결정된메뉴
+        var tmpMenuArr = []; //메뉴설정에서 메뉴들을 선택했을때 저장된 메뉴
+        var menuNum = 0;
+        const baseMenuArr = ['사전','뉴스','증권','부동산','영화','VIBE','책','웹툰'];
+        const MenuLink ={
+        
+            '사전' : 'https://dict.naver.com/',
+            '뉴스' : 'https://news.naver.com/',
+            '증권' : '#1',
+            '부동산' : '#2',
+            '영화' : '#3',
+            'VIBE' : '#4',
+            '책' : '#5',
+            '웹툰' : '#6'
+        } 
+
+        function setMenuCheckbox(Arr){
+            $('.menu_list input').each(function(){
+                var text = $(this).parent().text().trim();
+                if(Arr.indexOf(text) != -1){
+                $(this).prop('checked',true);
+                }else{
+                $(this).prop('checked',false);
+                }
+            })
+        }
+        function setGroupnav(Arr1,Arr2){
+            var arr;
+            // 선택된 메뉴가 없으면 == > 사용자 설정 메뉴가 없으면
+            if(Arr1.length == 0){
+                // 기본 메뉴를 기준
+                arr = Arr2;
+                //알림창
+            }else{
+                //선택된 메뉴를 기준
+                arr = Arr1;
+            }
+            str = '';
+            for(var i = 0; i<arr.length ; i++){
+                str += '<a href="'+MenuLink[arr[i]]+'" class="item_menu">'+arr[i]+'</a>'
+            }
+            $('.group_nav_right.noun').html(str);
+        }
+        function setEmptyMenu(Arr){
+            $('.group_nav_right.type_point .item_menu').removeClass('focus');
+            $('.group_nav_right.type_point .item_menu').removeClass('selected');
+            $('.group_nav_right.type_point .item_menu').each(function(i){
+                if(i < Arr.length){
+                    $(this).addClass('selected');
+                    $(this).text(Arr[i])
+                }else{
+                    $(this).text('');
+                    if(i == Arr.length){
+                        $(this).addClass('focus');
+                    }
+                }
+            })
+        }
+        //오늘 읽을만한 글 버튼 사라졌따 켜지게하는것
+        function viewGroupMenuBtn(){
+            if($('.list_category:first li:first>a').hasClass('select')){
+                $('.theme_fix_wrap .button_left').hide();
+            }else{
+                $('.theme_fix_wrap .button_left').show();
+            }
+            if($('.list_category:last li:last>a').hasClass('select')){
+                $('.theme_fix_wrap .button_right').hide();
+            }else{
+                $('.theme_fix_wrap .button_right').show();
+            }
+        }
+        
+        
+        
+        
+        
     </script>
 </body>
 </html>
