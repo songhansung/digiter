@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롤링예제</title>
+    <script src="/js/jquery.js"></script>
+    <style>
+        .time{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 99px;         
+        }
+        .box{
+            width: 300px;
+            height: 100px;
+            margin:0 auto;
+            padding: 10px;
+            text-align: center;
+        }
+        .box .btn,.box2btn .btn{
+            width: 80px;
+            height: 40px;
+        }
+        .box .stop-btn{
+            display: none;
+        }
+        .box2{
+            width: 200px;
+            height: 500px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 0 auto;
+            overflow: auto;
+        }
+        .box2btn{
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .record-reset{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time">00:00:00.00</div>
+    <div class="box">
+        <button class="btn start-btn">시작</button>
+        <button class="btn stop-btn">일시정지</button>
+        <button class="btn record-btn">기록</button>
+        <button class="btn reset-btn">초기화</button>
+    </div>   
+    <div class="box2"></div>
+    <div class="box2btn">
+        <button class="btn record-reset">기록리셋</button>
+    </div>
+    <script>
+        $(function(){
+            /*
+            - setTimeout(함수, 시간); : 시간이 지나면 함수를 실행
+            - setInterval(함수, 시간); : 시간마다 함수를 실행, 리턴값으로 interval 번호를 반환
+            - clearInterval(번호) : 해당 번호에 일치하는 interval을 중지
+            */
+            setTimeout(function(){
+                console.log('2초뒤')
+            },2000)
+            var interval = setInterval(function(){
+                console.log('1초');
+            },1000)
+            setTimeout(function(){
+                clearInterval(interval);
+            },10000);
+        })
+        $(function(){
+            var time = 0;
+            var interval;
+            // 시작버튼 클릭
+            $('.start-btn').click(function(){
+                $(this).hide();
+                $('.stop-btn').show();
+                interval = setInterval(() => {
+                    time++;
+                    $('.time').html(getTime(time));
+                }, 10);
+            })
+            // 정지버튼 클릭
+            $('.stop-btn').click(function(){
+                $(this).hide();
+                $('.start-btn').show();
+                clearInterval(interval);
+            })
+            $('.record-btn').click(function(){
+                var str = '<div class="time-record">'+getTime(time)+'</div>'
+                $('.box2').prepend(str);
+            })
+            // 기록 초기화
+            $('.record-reset').click(function(){
+                $('.box2').empty();
+            })
+            // 처음부터 초기화
+            $('.reset-btn').click(function(){
+                if(time != 0){
+                    $('.time').text('00:00:00.00');
+                    time = 0;
+                }
+            })
+            // 시간을 문자열로 변환하는 함수
+            function getTime(time){
+                        //정수로만들어주는 명령어 parseInt
+                var s = parseInt(time / 100); //1초
+                var m = parseInt(time / (60 * 100)); //1분
+                var h = parseInt(time / (60 * 60 * 100)); //60분
+                var ms = time % 100;
+                s = s < 10 ? '0'+ s : s;// s 가 10보다작으면 앞에0을 아니면 그냥적어줌
+                m = m < 10 ? '0'+ m : m;
+                h = h < 10 ? '0'+ h : h;
+                ms = ms < 10 ? '0'+ms : ms;
+                return h + ':' + m + ':' + s + '.' + ms;
+            }
+        })
+
+    </script>
+</body>
+</html>
