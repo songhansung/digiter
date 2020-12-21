@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼 예제</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+</head>
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+<body>
+    <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image:url(https://www.sciencetimes.co.kr/wp-content/uploads/2014/05/MIX26023.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(https://astro.kasi.re.kr/file/astro_page/495847380317755.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(https://lh3.googleusercontent.com/proxy/RbT4APv5Yt_JhRZ2JFDH5t7fXxLH2LjzciKv6kiLIHeFx7vT0zT27DJJZXekuGKnjBAL6tyQIy-Saei-rbRD0htaPZt2cqn6EOiutdBj2PFGWPwT6_Qd1ZlTMr2OI2ANKKJJLa1QJqzoAEJVR9X-mXtAFGXUg7GKvCI2DStcxTkpNRzrWmHScU7R26pTPUGodDTVlyz0g_8eV8Wu0KUSPaYJnlUFg4GhJKJdgyOLG0MR0GbLF9DprbxbOMigSWtpFytSam-m9iN6uKrWZoWQysHzw3D1eaRWLFqrOGOaLHU4NmgQgXPrwLuYFj0YSIa4GvUjiEKxa0aOsg054uLzy_dy0xChlDsBig)"></div>
+      <div class="swiper-slide" style="background-image:url(https://img.khan.co.kr/news/2015/12/15/2015121501002407000198541.jpg)"></div>
+      <div class="swiper-slide" style="background-image:url(https://lh3.googleusercontent.com/proxy/Xw50CGbfdcR13nhR7meu970r81jvZ2wm4f4kxjjkCzWOnH0ALSRZNzm2gOrZDEdW1n6yCtjQ7g34m9jh_SEEA4ygkiME-vFzDZJS597JQv2oFyD_EUx9oLR44s7q06hXpVchHGH7HIHGLDKe7Iz82IVH5RLMr3K87gGNe47ii1CmwHjoprkBcZMD2dxlRuDu8OattS7qWtI9-gqBHwMFmKqInj6oFy5wyw3WDHRCxQcv6DvuEWufJOGXEeZpZMbnFYCSrtztqu5B0JFDid219ef4RU4-GcSo6bewMGjpSTZ7UCS_aqGpEdnJv_Orykiastwi)"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="../package/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'cube',
+        grabCursor: true,
+        cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+</body>
+</html>
