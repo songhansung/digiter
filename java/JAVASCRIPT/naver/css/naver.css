@@ -17,6 +17,70 @@ a{
     height: 50px;
     border-top: 1px solid rgb(224,227,230);
     border-bottom: 1px solid rgb(224,227,230);
+    position: relative;
+}
+.box2 .ly_service{
+    position: absolute;
+    background-color:white;
+    width: 100%;
+    padding: 20px 30px 22px;
+    box-sizing: border-box;
+    border-top: 1px solid #e4e8eb;
+    display: none;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.12);
+    z-index: 10;
+}
+.box2 .ly_menu_set{
+    display: none;
+}
+.box2 .ly_menu_set .service_list>a{
+    cursor: default;
+}
+.box2 .ly_service .ly_service_groud{
+    width: 1128px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+    border-left: 1px solid #e4e8eb;
+}
+.box2 .ly_service .ly_service_groud .service_list{
+    float: left;
+    width: calc(100% / 7);
+    box-sizing: border-box;
+    font-size: 13px;
+    padding: 0 18px 0 19px;
+    height: 237px;
+}
+.box2 .ly_service .ly_service_groud .service_list a{
+    display: block;
+    line-height: 26px;
+    color: black;
+}
+.box2 .ly_service .ly_service_groud .service_list +.service_list{
+    border-right: 1px solid #e4e8eb;
+}
+.box2 .ly_service .ly_service_groud .service_list .menu_name{
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-top: 3px;
+}
+.box2 .ly_service .ly_service_groud .service_list .menu_plus{
+    margin-top: 3px;
+    color: gray;
+}
+.box2 .ly_service .ly_service_groud .service_list .menu_plus::after{
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    background-position: -319px -296px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin-left: 7px;
+    vertical-align: 0;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
+    background-size: 440px 410px;
 }
 .box3{
     min-width: 1190px;
@@ -46,9 +110,6 @@ a{
     background: url(https://ssl.pstatic.net/tveta/libs/1295/1295259/33cec00b47822ec5a5c1_20201123104355350.jpg);
     background-size: 750px 135px;
     display: block;
-}
-.gongback{
-    margin-bottom: 12px;
 }
 .login-box{
     height: 135px;
@@ -92,7 +153,7 @@ a{
     display: block;
 }
 .find_id,.find_pw,.signup,.fa-lock,.fa-user{
-    color: black;
+    color: gray;
     line-height: 16px;
     font-size: 12px;
     display: inline-block;
@@ -109,10 +170,6 @@ a{
     line-height: 2px;
     margin-bottom: 2px;
 }
-.fa-lock,.fa-user{
-    color: gray;
-    opacity: 0.5;
-}
 .sub_left .find_id:hover{
     text-decoration: underline;
 }
@@ -124,13 +181,13 @@ a{
 }
 .newsstand{
     width: 100%;
-    position: relative;
     padding: 12px 15px 11px 15px;
     background-color: #f7f9fa;
     border: 1px solid #dae1e6;
     line-height: 20px;
     display: inline-block;
     box-sizing: border-box;
+    margin-top: 12px;
 }
 .issue_area{
     float: left;
@@ -144,6 +201,18 @@ a{
     /* background-color: yellow; */
     float: right;
     overflow: hidden;
+}
+.rolling_news .rolling_text{
+    display: block;
+    margin-top: 1px;
+    font-size: 13px;
+    color: #202020;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rolling_news .rolling_text:hover{
+    text-decoration: underline;
 }
 .link_media{
     height: 100%;
@@ -181,25 +250,41 @@ a{
     float: right;
 }
 .sc_timesquare{
+    margin-top: 12px;
     height: 47px;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    border: 1px solid #dae1e6;
+    position: relative;
 }
 .left_timesquare{
     height: 100%;
-    width: 80%;
+    width: 70%;
     float: left;
-    border: 1px solid black;
-    box-sizing: border-box;  
+    overflow: hidden; 
+}
+.left_timesquare .timesquare_wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.left_timesquare .timesquare_rolling{
+    width: calc(281px * 6);
+}
+.left_timesquare .timesquare_rolling .card{
+    width: 281px;
+    box-sizing: border-box;
+    padding:  15px 0 14px 16px;
+    display: block;
+    float: left;
 }
 .right_timesquare{
-    height: 100%;
-    width: 20%;
-    float: right;
+    top: 10px;
+    right: 10px;
+    position: absolute;
     box-sizing: border-box;
     text-align: center;
-    padding: 10px 5px 5px 12px;
 }
 .news_button{
     background-color: white;
@@ -213,7 +298,6 @@ a{
 }
 .box .sc_newscast{
     width: 100%;
-    position: relative;
     padding: 16px 0px 11px 0px;
     box-sizing: border-box;
 }
@@ -291,7 +375,6 @@ a{
 }
 .page_viwe .thumb_box1,.thumb_box2,.thumb_box3,.thumb_box4,.thumb_box5,.thumb_box6{
     float: left;
-    position: relative;
     line-height: 30px;
     width: 16.66%;
     height: 25%;
@@ -301,11 +384,11 @@ a{
     border: 1px solid #dae1e6;
     border-right: 0px;
     border-bottom: 0px;
+    position: relative;
     
 }
 .page_viwe .two_box1,.two_box2,.two_box3,.two_box4,.two_box5,.two_box6{
     float: left;
-    position: relative;
     line-height: 30px;
     width: 16.66%;
     height: 25%;
@@ -318,7 +401,6 @@ a{
 }
 .page_viwe .three_box1,.three_box2,.three_box3,.three_box4,.three_box5,.three_box6{
     float: left;
-    position: relative;
     line-height: 30px;
     width: 16.66%;
     height: 25%;
@@ -331,7 +413,6 @@ a{
 }
 .page_viwe .for_box1,.for_box2,.for_box3,.for_box4,.for_box5,.for_box6{
     float: left;
-    position: relative;
     line-height: 30px;
     width: 16.66%;
     height: 25%;
@@ -374,11 +455,9 @@ a{
     width: 350px;
     margin-top: 12px;
     background-color: violet;
-    position: relative;
 }
 .rollingboard_player_inner .rolling_warp_link{
     height: 100%;
-    width: 100%;
     position: absolute;
 }
 .sc_shopcast{
@@ -840,13 +919,38 @@ a{
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
     background-size: 440px 410px
 }
-.sc_themecast .theme_head .theme_fix_wrap .group_category .list_category{
-    border-top: 1px solid #dae1e6;
-    border-left: 1px solid #dae1e6;
-    border-bottom: 1px solid #dae1e6;
-}
 .sc_themecast .theme_head .theme_fix_wrap .group_category{
     position: relative;
+    height: 49px;
+    border: 1px solid #dae1e6;
+    overflow: hidden;
+}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_box{
+    position: absolute;
+    width: 750px;
+    height: 49px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.sc_themecast .theme_head .theme_fix_wrap{
+    position: relative;
+}
+
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_box.list_box1{
+    left: 0;
+    /* display: none; */
+}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_box.list_box2{
+    left: 750px;
+    /* display: none; */
+}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_box.list_box3{
+    left: 1500px;
+    /* display: none; */
+}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_box.list_box4{
+    left: 2250px;
+    /* display: none; */
 }
 .sc_themecast .theme_head .theme_fix_wrap .group_category .list_category>li{
     width: 12.5%;
@@ -855,10 +959,43 @@ a{
     display: block;
     font-size: 13px;
     line-height: 49px;
-    border-right: 1px solid #dae1e6;
     box-sizing: border-box;
     font-weight: bold;
+    position: relative;
 }
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item+.category_item{
+    border-left: 1px solid #dae1e6;
+}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_category li>a{
+    color: black;
+    display: block;
+}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .enter.select{			background-color: #e65da0;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .sport.select{			background-color: #0147b5;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .car.select{			background-color: #4a94e1;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .wepton.select{			background-color: #66c971;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .money.select{			background-color: #35ae5e;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .food.select{			background-color: #e77c43;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .game.select{			background-color: #5bb8e1;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .movie.select{			background-color: #1a2f63;		}
+
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .job.select{			background-color: #e65da0;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .tech.select{			background-color: #0147b5;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .traval.select{			background-color: #4a94e1;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .sci.select{			background-color: #66c971;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .living.select{			background-color: #35ae5e;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .health.select{			background-color: #e77c43;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .business.select{			background-color: #5bb8e1;		}
+.sc_themecast .theme_head .theme_fix_wrap .group_category .category_item .marry.select{			background-color: #1a2f63;		}
+
+.sc_themecast .theme_head .theme_fix_wrap .group_category .list_category li>a.select{
+    position: relative;
+    margin: 0 -1px;
+	border-radius: 1px;
+    color: #fff;
+    z-index: 1;
+}
+
 .sc_themecast .theme_head .theme_fix_wrap .button_left{
     position: absolute;
     width: 40px;
@@ -870,6 +1007,13 @@ a{
     background-size: 440px 410px;
     left: -21px;
     top: 6px;
+    z-index: 10;
+}
+.sc_themecast .theme_head .theme_fix_wrap .button_left:hover{
+    background-position: -44px -342px;
+}
+.sc_themecast .theme_head .theme_fix_wrap .button_right:hover{
+    background-position: -170px -342px;
 }
 .sc_themecast .theme_head .theme_fix_wrap .button_right{
     position: absolute;
@@ -882,6 +1026,7 @@ a{
     background-size: 440px 410px;
     left: 730px;
     top: 6px;
+    z-index: 10;
 }
 .box_foot{
     width: 100%;
@@ -1118,6 +1263,7 @@ background-size: 440px 410px;
     height: 52px;
     border: 2px solid #00db52;
     border-radius: 2px 2px 2px 2px;
+    position: relative;
 }
 .box1 .group_flex .service_area .green_window .serch{
     width: 444px;
@@ -1132,6 +1278,43 @@ background-size: 440px 410px;
     outline: 0;
     float: left;
     border: none;
+}
+.box1 .group_flex .service_area .green_window .window_foot{
+    position: absolute;
+    top: 53px;
+    right: -2px;
+    border: 1px solid #e4e7e8;
+    width: 584px;
+    background-color: #f9fafb;
+    border-radius: 0 0 6px 6px;
+    line-height: 37px;
+    display: none;
+}
+.box1 .group_flex .service_area .green_window .window_foot .foot_left{
+    float: left;
+    padding-left: 12px;
+    font-size: 12px;
+    
+}
+.box1 .group_flex .service_area .green_window .window_foot .foot_right{
+    float: right;
+    margin-right: 12px;
+    vertical-align: top;
+    font-size: 12px;
+}
+.box1 .group_flex .service_area .green_window .window_foot .foot_macro{
+    color: gray;
+}
+.box1 .group_flex .service_area .green_window .window_foot .foot_help{
+    color: gray;
+}
+.box1 .group_flex .service_area .green_window .window_foot .foot_pols{
+    color: #03c75a;
+}
+.box1 .group_flex .service_area .green_window .window_foot .foot_help,
+.box1 .group_flex .service_area .green_window .window_foot .foot_pols{
+    float: left;
+    padding: 0 6px;
 }
 .box1 .group_flex .service_area .green_window .button_serch{
     width: 56px;
@@ -1209,6 +1392,8 @@ background-size: 440px 410px;
     position: relative;
     padding: 11px 220px 11px 0;
     display: inline-block;
+    width: 1130px;
+    box-sizing: border-box;
 }
 .box2 .group_nav .group_nav_left{
     float: left;
@@ -1221,6 +1406,7 @@ background-size: 440px 410px;
     margin: 5px;
     line-height: 30px;
 }
+
 .box2 .group_nav .group_nav_left .mail::before{
     content: '';
     display: inline-block;
@@ -1246,23 +1432,61 @@ background-size: 440px 410px;
     background-size: 440px 410px;
 }
 .box2 .group_nav .group_nav_right{
-    display: inline-block;
     margin-left: 15px;
+    float: left;
+}
+.box2 .group_nav .type_point .item_menu{
+    width: 68px;
+    height: 28px;
+    background-color: yellow;
+    border: 1px solid #dae1e6;
+    background-color: #fff;
+    display: inline-block;
+}
+.box2 .group_nav .type_point{
+    display: none;
 }
 .box2 .group_nav .group_nav_right .item_menu{
     font-size: 15px;
     color: black;
     font-weight: bold;
-    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
     line-height: 30px;
+    float: left;
+}
+.box2 .group_nav .group_nav_right .item_menu.focus{
+    border-color: #19ce60;
+    background-color: white;
+}
+.box2 .group_nav .group_nav_right .item_menu.selected{
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 30px;
+    width: auto;
 }
 .box2 .group_nav .group_nav_menu{
     margin-left: 17px;
+    margin-top: 6px;
     min-width: 70px;
     font-size: 13px;
     line-height: 20px;
     color: #202020;
     text-align: right;
+    float: left;
+}
+.box2 .group_nav .group_nav_menu .ly_btn_area{
+    display: inline-block;
+}
+.box2 .group_nav .group_nav_menu .ly_btn_area.saves{
+    display: none;
+}
+
+.box2 .group_nav .group_nav_menu.fold{
+    color: #0ecd5a;
 }
 .box2 .group_nav .group_nav_menu::after{
     display: inline-block;
@@ -1277,35 +1501,153 @@ background-size: 440px 410px;
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
     background-size: 440px 410px;
 }
+.box2 .group_nav .group_nav_menu.fold::after{
+    background-position: -332px -258px;
+}
 .box2 .group_nav .group_nav_menu:hover{
     text-decoration: underline;
 }
 .box2 .box2_in .group_keyword{
-    float: right;
-    margin-top: 12px;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    overflow: hidden;
+    width: 210px;
+    height: 30px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 30px;
+    cursor: pointer;
 }
-.box3 .conbox1 .cont_sports .group_topstory{
+.box2 .box2_in .ly_realtime{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    min-width: 601px;
+    height: 425px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.12);
+    z-index: 5;
+    display: none;
+}
+.box2 .box2_in .ly_realtime .title_area{
+    position: relative;
+    padding: 17px 50px 14px 20px;
+    border-bottom: 1px solid #e4e8eb;
+    line-height: 18px;
+}
+.box2 .box2_in .ly_realtime .title_area>span{
+    display: inline-block;
+    font-weight: bold;
+}
+.box2 .box2_in .ly_realtime .title_area .desc{
+    display: inline-block;
+    font-size: 12px;
+    color: grey;
+    
+}
+.box2 .box2_in .ly_realtime .title_area .btn_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.box2 .box2_in .ly_realtime .title_area .btn_close::before{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-position: -420px -347px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin: 19px 18px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
+    background-size: 440px 410px;
+}
+.box2 .box2_in .group_keyword .error_ico{
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
+    background-size: 440px 410px;
+    background-position: -420px -331px;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin: 8px 5px 0 0;
+    vertical-align: top;
+}
+.box2 .box2_in .group_keyword::after{
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
+    background-size: 440px 410px;
+    background-position: -388px -245px;
+    width: 14px;
+    height: 9px;
+    display: inline;
+    margin: 11px 0 0 6px;
+    content: '';
+    vertical-align: top;
+    position: absolute;
+}
+.box2 .group_nav .ly_btn_area{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 13px;
+    display: none;
+    background-color: white;
+    z-index: 10;
+}
+.box2 .group_nav .ly_btn_area .btn{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 7px 13px 5px;
+    border-radius: 20px;
+    color: black;
+}
+.box2 .group_nav .ly_btn_area .save{
+    background-color: #19ce60;
+	border-color: #00c73c;
+	color: #fff;
+}
+.box2 .group_nav .ly_btn_area .all+.menu_set{
+    margin-left: 3px;
+}
+.box2 .group_nav .ly_btn_area .menu_set::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background-position: -293px -308px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    content: '';
+    margin: 2px 5px 0 0;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
+    background-size: 440px 410px;
+}
+.box3 .conbox1 .cont_box{
+    position: relative;
+}
+.box3 .conbox1 .cont.sports .group_topstory{
     padding: 22px 0 18px;
     display: block;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner{
     float: left;
     display: block;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_thumb{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_thumb{
     display: block;
     overflow: hidden;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_thumb>img{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_thumb>img{
     vertical-align: top;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_info{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_info{
     display: block;
     padding: 16px 18px 0 0;
     text-decoration: none;
     overflow: hidden;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_info>strong{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_info>strong{
     display: block;
     font-size: 13px;
     overflow: hidden;
@@ -1313,28 +1655,28 @@ background-size: 440px 410px;
     line-height: 22px;
     color: #202020;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_info>span{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_info>span{
     display: block;
     font-size: 12px;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner+.topstory_inner{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner+.topstory_inner{
     margin-left: 22px;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_info .inner_span1{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_info .inner_span1{
     color: #0147b5;
     font-weight: bold;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_info .inner_span2{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_info .inner_span2{
     color: #505050;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner .topstory_info:hover>strong{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner .topstory_info:hover>strong{
     text-decoration: underline;
 }
-.box3 .conbox1 .cont_sports .group_topstory .topstory_inner:hover .topstory_thumb>img{
+.box3 .conbox1 .cont.sports .group_topstory .topstory_inner:hover .topstory_thumb>img{
     transform: scale(1.1);
     transition: transform 0.2s;
 }
-.conbox1 .cont_sports .theme_link{
+.conbox1 .cont.sports .theme_link{
     padding: 15px 18px;
     margin-top: -1px;
     background-color: #f7f9fa;
@@ -1342,29 +1684,29 @@ background-size: 440px 410px;
     font-size: 13px;
     font-weight: 700;
 }
-.conbox1 .cont_sports .theme_link .sevice{
+.conbox1 .cont.sports .theme_link .sevice{
     padding: 5px 0 4px;
     font-size: 13px;
     color: #404040;
 }
-.conbox1 .cont_sports .theme_link .blue{
+.conbox1 .cont.sports .theme_link .blue{
     color: #0147b5;
     border-right: 1px solid #e4e8eb;
     padding-right: 14px;
 }
-.conbox1 .cont_sports .theme_link .use{
+.conbox1 .cont.sports .theme_link .use{
     margin-left: 18px;
 }
-.conbox1 .cont_sports .theme_link .sevice:hover{
+.conbox1 .cont.sports .theme_link .sevice:hover{
     text-decoration: underline;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap{
+.conbox1 .cont.sports .group_theme .media_view_wrap{
     padding: 18px 0 17px;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_view{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_view{
     margin: 0 -27px -31px 0;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area{
     display: inline-block;
     width: 232px;
     font-size: 12px;
@@ -1373,28 +1715,28 @@ background-size: 440px 410px;
     text-decoration: none;
     margin: 0 21px 31px 0
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_thumb{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_thumb{
     overflow: hidden;
     display: block;
     position: relative;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_info{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_info{
     display: block;
     padding-top: 12px;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_info .category{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_info .category{
     display: block;
     color: #0147b5;
     font-weight: bold;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_info .title{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_info .title{
     color: #202020;
     font-size: 13px;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_info .source_wrap{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_info .source_wrap{
     vertical-align: top;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_info .source_wrap>span{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_info .source_wrap>span{
     font-size: 12px;
     color: #404040;
 }
@@ -1408,12 +1750,12 @@ background-size: 440px 410px;
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main_1f05c0.png);
     background-size: 440px 410px;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_thumb .pm_ico_play{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_thumb .pm_ico_play{
     position: absolute;
     bottom: 8px;
     left: 12px;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_info .source_wrap .date::after{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_info .source_wrap .date::after{
     background-color: grey;
     display: inline-block;
     width: 2px;
@@ -1425,15 +1767,20 @@ background-size: 440px 410px;
     margin: 0 1px 0 5px;
     vertical-align: 3px;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area:hover .media_thumb>img{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area:hover .media_thumb>img{
     transform: scale(1.1);
     transition: transform 0.2s;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area .media_thumb>img{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area .media_thumb>img{
     vertical-align: top;
 }
-.conbox1 .cont_sports .group_theme .media_view_wrap .media_area:hover .media_info>strong{
+.conbox1 .cont.sports .group_theme .media_view_wrap .media_area:hover .media_info>strong{
     text-decoration: underline;
+}
+.box3 .conbox1 .cont.enter{
+    height: 800px;
+    background-color: blue;
+    display: none;
 }
 .conbox1 .alert_msg{
     margin-top: 7px;

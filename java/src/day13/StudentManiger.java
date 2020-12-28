@@ -68,7 +68,7 @@ public class StudentManiger implements Program {
 
 	}
 	public void printMenu() {
-		System.out.println("-----메뉴-----");
+
 		System.out.println("1.학생등록");
 		System.out.println("2.학생확인");
 		System.out.println("3.학생검색");
