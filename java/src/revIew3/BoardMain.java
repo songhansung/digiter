@@ -18,10 +18,7 @@ public class BoardMain {
 		 * 6. 종료
 		 * */
 		int menu;
-<<<<<<< HEAD
-=======
-		
->>>>>>> main
+
 		ArrayList<Board> list = new ArrayList<Board>();
 		
 		do {
